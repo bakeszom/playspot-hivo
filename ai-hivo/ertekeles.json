@@ -1,0 +1,20 @@
+{
+  "success_evaluation": [
+    {"id": "szemelyes_idopont", "prompt": "Sikerült-e konkrét napra és órára személyes találkozót egyeztetni Ádámmal?"},
+    {"id": "online_idopont", "prompt": "Sikerült-e online bemutató időpontot egyeztetni?"},
+    {"id": "dontesho_elerheto", "prompt": "Megvan-e a döntéshozó neve ÉS közvetlen elérhetősége?"},
+    {"id": "ai_kozles_elejen", "prompt": "Az ügynök az első mondatában jelezte-e, hogy AI-asszisztens?"},
+    {"id": "szabalyszeges", "prompt": "Ígért-e az ügynök nem létező funkciót, árat, kedvezményt, vagy mondta-e, hogy 'nincs jutalék'? (Siker = NEM.)"}
+  ],
+  "data_collection": [
+    {"id": "eredmeny", "type": "string", "description": "egyike: szemelyes_idopont | online_idopont | dontesho_megvan | email_megvan | visszahivas | nem_erdekelt | nem_vette_fel | hibas_szam"},
+    {"id": "idopont", "type": "string", "description": "Egyeztetett találkozó dátuma és ideje ISO formában, ha van"},
+    {"id": "dontesho_nev", "type": "string", "description": "A döntéshozó neve, ha elhangzott"},
+    {"id": "dontesho_elerhetoseg", "type": "string", "description": "Telefon vagy email, ha elhangzott"},
+    {"id": "jelenlegi_foglalas", "type": "string", "description": "Hogyan foglalnak most: telefon, Messenger, füzet, Excel, Playtomic, saját rendszer, egyéb"},
+    {"id": "kifogasok", "type": "string", "description": "A hívásban elhangzott összes kifogás szó szerint, pontosvesszővel elválasztva"},
+    {"id": "kifogas_kezelve", "type": "string", "description": "Kifogásonként: a tudásbázis melyik [Kxx] válaszát használta az ügynök, vagy 'UJ' ha nem volt rá válasz; és a hívó reakciója utána (elfogadta / nem)"},
+    {"id": "visszahivas_mikor", "type": "string", "description": "Kért visszahívási időpont, ha van"},
+    {"id": "megjegyzes", "type": "string", "description": "Bármi, amit Ádámnak tudnia kell a látogatás előtt"}
+  ]
+}
